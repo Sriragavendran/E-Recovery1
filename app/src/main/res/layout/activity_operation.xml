@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".operationActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="413dp"
+        android:layout_height="272dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <Button
+        android:id="@+id/vehicle"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:text="Vehicle"
+        app:layout_constraintBottom_toTopOf="@+id/emergency"
+        app:layout_constraintEnd_toStartOf="@+id/pdata"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <Button
+        android:id="@+id/pdata"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:text="Patient Data"
+        app:layout_constraintBottom_toTopOf="@+id/emergency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <Button
+        android:id="@+id/emergency"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="216dp"
+        android:text="EMERGENCY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

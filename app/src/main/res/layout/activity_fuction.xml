@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".FunctionActivity">
+
+    <EditText
+        android:id="@+id/emailcheck"
+        android:layout_width="285dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        android:background="#F1E8EC"
+        android:ems="10"
+        android:hint="Patient_id"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordcheck"
+        android:layout_width="285dp"
+        android:layout_height="40dp"
+        android:background="#F1E8EC"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailcheck"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="80dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="or"
+        android:textSize="25dp"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginenter" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="420dp"
+        android:layout_height="44dp"
+        android:text="LOGIN"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"
+        android:background="#0C470F"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/emailcheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/loginenter"
+        android:layout_width="178dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="48dp"
+        android:text="LOGIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordcheck" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="178dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:text="REGISTER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.052" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
