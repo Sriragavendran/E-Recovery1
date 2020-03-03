@@ -14,15 +14,16 @@ import mailer.EMailSender;
 public class operationActivity extends AppCompatActivity {
     private static final String mailId = "erecoveryapplication05@gmail.com";
     private static final String password = "recover@123";
-    private Button vehicle, patientData, emergency;
+    private Button vehicle, patientData, emergency,route;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_operation);
         vehicle = findViewById(R.id.vehicle);
         patientData = findViewById(R.id.pdata);
         emergency = findViewById(R.id.emergency);
+        route=findViewById(R.id.route);
         vehicle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +40,12 @@ public class operationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendEmail();
+            }
+        });
+        route.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(operationActivity.this,signalActivity.class));
             }
         });
 

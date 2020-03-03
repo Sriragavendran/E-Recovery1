@@ -26,16 +26,29 @@ public class patientActivity extends AppCompatActivity {
         problem = (EditText) findViewById(R.id.problem);
         save = (Button) findViewById(R.id.save);
 
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            save.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(validate()) {
+                        String data = "Name :" + patientName.getText().toString().trim() + "Vehicle Number :" + problem.getText().toString().trim();
+                        Toast.makeText(patientActivity.this, "Data saved!!!", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(patientActivity.this,"Please enter the details...",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        
 
-                String data = "Name :" + patientName.getText().toString().trim() + "Vehicle Number :" + problem.getText().toString().trim();
-                Toast.makeText(patientActivity.this,"Data saved!!!",Toast.LENGTH_SHORT).show();
 
-            }
-        });
-
-
+    }
+    public Boolean validate(){
+        boolean result=true;
+        String name=patientName.getText().toString().trim();
+        String prob=problem.getText().toString().trim();
+        if(name.isEmpty()&&prob.isEmpty()){
+            result=false;
+        }
+        return result;
     }
 }
